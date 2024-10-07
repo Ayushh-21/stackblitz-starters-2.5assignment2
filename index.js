@@ -219,7 +219,7 @@ app.get('/stocks/filter/exchange', (req, res) => {
   let filterByExchange = stocks.filter((stock) =>
     getFilterByExchange(stock, exchange)
   );
-  res.json(filterByExchange);
+  res.json({filterByExchange});
 });
 
 // filter by Industry
@@ -233,7 +233,7 @@ app.get('/stocks/filter/industry', (req, res) => {
   let filterByIndustry = stocks.filter((stock) =>
     getFilterByIndustry(stock, industry)
   );
-  res.json(filterByIndustry);
+  res.json({filterByIndustry});
 });
 
 // all stocks
